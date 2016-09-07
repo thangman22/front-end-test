@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>VueJs</title>
+    <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Random</span>
+    </div>
+</header>
+<main class="mdl-layout__content main-content">
+    <div class="page-content" v-for="item in Loaditems"> <div class="card-wide mdl-card mdl-shadow--2dp"> <div class="mdl-card__title" style="background: url({{item.picture}}) center / cover"> <h2 class="mdl-card__title-text"></h2> </div> <div class="mdl-card__supporting-text">{{item.text}}</div> <div class="mdl-card__actions mdl-card--border"> <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Go to Article </a> </div> </div> </div>
+</main>
+</div>
+<script type="text/javascript">
+    new Vue({
+      el: '.main-content',
+      data: {
+        Loaditems: []
+    },
+    ready: function() {
+        $.ajax({
+            url: 'generated.json',
+            type: 'GET',
+            dataType: 'json',
+        })
+        .done((res) =>  {
+            this.Loaditems = res;
+        })
+    },
+})
+</script>
+</body>
+</html>

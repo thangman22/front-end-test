@@ -1,0 +1,12 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="import" href="../../bower_components/polymer/polymer.html">
+
+</head><body><dom-module id="polymer-app">
+  <template>
+    <iron-ajax auto="" url="/generated.json" handle-as="json" last-response="{{ajaxResponse}}"></iron-ajax>
+    <template is="dom-repeat" items="[[ajaxResponse]]">
+      <div class="page-content"> <div class="card-wide mdl-card mdl-shadow--2dp"> <div class="mdl-card__title" style="background: url([[item.picture]]) center / cover"> <h2 class="mdl-card__title-text"></h2> </div> <div class="mdl-card__supporting-text">[[item.text]]</div> <div class="mdl-card__actions mdl-card--border"> <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> Go to Article </a> </div> </div> </div>
+    </template>
+  </template>
+  <script>Polymer({is:"polymer-app",properties:{prop1:{type:String,value:"polymer-app"}}});</script>
+</dom-module>
+</body></html>

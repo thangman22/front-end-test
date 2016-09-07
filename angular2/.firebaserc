@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "rendering-test",
+    "production": "ng2-render"
+  }
+}

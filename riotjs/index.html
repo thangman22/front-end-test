@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>RiotJS</title>
+    <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/riot/2.6/riot.min.js"></script>
+    <script src="card.js"></script>
+</head>
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Random</span>
+    </div>
+</header>
+<main class="mdl-layout__content main-content">
+<card></card>
+</main>
+</div>
+<script>riot.mount('card')</script>
+</body>
+</html>

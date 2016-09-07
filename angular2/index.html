@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Angular2</title>
+  <base href="/">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Random</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content main-content" >
+      <app-root></app-root>
+    </main>
+  </div>
+  <script src="vendor/es6-shim/es6-shim.js"></script>
+  <script src="vendor/reflect-metadata/Reflect.js"></script>
+  <script src="vendor/systemjs/dist/system.src.js"></script>
+  <script src="vendor/zone.js/dist/zone.js"></script>
+  <script>
+    System.import('system-config.js').then(function () {
+      System.import('main');
+    }).catch(console.error.bind(console));
+  </script>
+
+</body>
+</html>
